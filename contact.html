@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="dark" lang="en" style="">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Contact Me | Abhiraj T</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Geist:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                "surface-container": "#171f33",
+                "primary-fixed": "#6ffbbe",
+                "tertiary-fixed-dim": "#c0c1ff",
+                "on-primary": "#003824",
+                "background": "#0b1326",
+                "surface": "#0b1326",
+                "inverse-primary": "#006c49",
+                "on-primary-fixed-variant": "#005236",
+                "error": "#ffb4ab",
+                "on-tertiary-fixed-variant": "#2f2ebe",
+                "tertiary-container": "#9699ff",
+                "surface-tint": "#4edea3",
+                "primary-fixed-dim": "#4edea3",
+                "on-surface-variant": "#bbcabf",
+                "on-tertiary-fixed": "#07006c",
+                "on-secondary-fixed-variant": "#004c69",
+                "on-error": "#690005",
+                "tertiary-fixed": "#e1e0ff",
+                "error-container": "#93000a",
+                "surface-container-low": "#131b2e",
+                "primary": "#4edea3",
+                "surface-dim": "#0b1326",
+                "secondary-container": "#00a6e0",
+                "surface-container-lowest": "#060e20",
+                "on-primary-container": "#00422b",
+                "secondary-fixed-dim": "#7bd0ff",
+                "outline": "#86948a",
+                "outline-variant": "#3c4a42",
+                "on-secondary-container": "#00374d",
+                "inverse-surface": "#dae2fd",
+                "secondary": "#7bd0ff",
+                "on-error-container": "#ffdad6",
+                "surface-variant": "#2d3449",
+                "on-surface": "#dae2fd",
+                "on-background": "#dae2fd",
+                "surface-container-highest": "#2d3449",
+                "primary-container": "#10b981",
+                "on-primary-fixed": "#002113",
+                "on-tertiary-container": "#1d17b2",
+                "surface-container-high": "#222a3d",
+                "on-secondary": "#00354a",
+                "surface-bright": "#31394d",
+                "tertiary": "#c0c1ff",
+                "inverse-on-surface": "#283044",
+                "on-tertiary": "#1000a9",
+                "on-secondary-fixed": "#001e2c"
+              },
+              "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+              },
+              "spacing": {
+                "unit": "4px",
+                "margin-mobile": "20px",
+                "container-max": "1200px",
+                "margin-desktop": "64px",
+                "gutter": "24px"
+              },
+              "fontFamily": {
+                "body-md": ["Geist"],
+                "display-lg": ["Geist"],
+                "headline-lg-mobile": ["Geist"],
+                "headline-lg": ["Geist"],
+                "label-caps": ["JetBrains Mono"],
+                "code-sm": ["JetBrains Mono"]
+              },
+              "fontSize": {
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg-mobile": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "code-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary/30 selection:text-primary overflow-x-hidden">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-16">
+    <div class="flex items-center gap-3">
+        <a href="portfolio.html" class="flex items-center gap-3">
+            <span class="material-symbols-outlined text-primary">terminal</span>
+            <span class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tight text-on-surface uppercase">Abhiraj T</span>
+        </a>
+    </div>
+    <nav class="hidden md:flex gap-8 items-center" id="desktop-nav">
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#projects">Projects</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#stack">Stack</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#contact">Connect</a>
+    </nav>
+    <button class="material-symbols-outlined text-on-surface-variant active:scale-95 transition-transform md:hidden" id="mobile-menu-button">more_vert</button>
+</header>
+
+<div class="fixed top-16 right-0 w-full max-w-xs bg-surface-container-high p-8 z-40 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+    <nav class="flex flex-col gap-8">
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#projects">Projects</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#stack">Stack</a>
+        <a class="font-label-caps text-label-caps text-on-surface-variant uppercase transition-colors hover:text-primary" href="portfolio.html#contact">Connect</a>
+    </nav>
+</div>
+
+<main>
+    <!-- Contact Form Section -->
+    <section class="relative min-h-screen flex flex-col justify-center px-margin-mobile md:px-margin-desktop py-20 overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full pointer-events-none opacity-20 bottom-6">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"></div>
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto w-full">
+            <h1 class="font-display-lg text-display-lg md:text-[80px] leading-tight mb-8 text-center">Contact Me</h1>
+            <p class="font-body-md text-body-md md:text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed text-center mx-auto">Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.</p>
+            
+            <form class="space-y-6">
+                <div>
+                    <label for="name" class="font-label-caps text-label-caps text-on-surface-variant uppercase">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="email" class="font-label-caps text-label-caps text-on-surface-variant uppercase">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 mt-2 focus:outline-none focus:ring-2 focus:ring-primary">
+                </div>
+                <div>
+                    <label for="message" class="font-label-caps text-label-caps text-on-surface-variant uppercase">Message</label>
+                    <textarea id="message" name="message" rows="4" class="w-full bg-surface-container-low border border-outline-variant/30 rounded-lg p-4 mt-2 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-primary px-8 py-4 rounded-lg font-bold text-on-primary hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2 mx-auto">
+                        <span class="material-symbols-outlined">send</span> Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer class="py-12 border-t border-outline-variant/30 text-center text-on-surface-variant">
+    <div class="flex justify-center gap-6 mb-6">
+        <a class="hover:text-primary transition-colors" href="#">GitHub</a>
+        <a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/meabhiraj/">LinkedIn</a>
+        <a class="hover:text-primary transition-colors" href="#">Twitter</a>
+    </div>
+    <p class="font-code-sm text-[10px] uppercase tracking-widest">© 2026 Abhiraj T // Engineered for Performance</p>
+</footer>
+
+<!-- Decorative Background -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 pointer-events-none overflow-hidden">
+    <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/5 rounded-full blur-[100px]"></div>
+    <div class="absolute bottom-[-5%] left-[-5%] w-[400px] h-[400px] bg-secondary-container/5 rounded-full blur-[80px]"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
